@@ -1,9 +1,7 @@
-FROM base/archlinux
+FROM justin8/archlinux
 MAINTAINER justin@dray.be
 
-RUN curl -sO https://repo.dray.be/dray-repo-0.7-1-any.pkg.tar.xz
-RUN pacman -U --noconfirm dray-repo-0.7-1-any.pkg.tar.xz
-RUN pacman -Syq --noprogressbar --noconfirm couchpotato
+RUN pacman -Syq --noconfirm couchpotato
 
 VOLUME "/config"
 
