@@ -6,4 +6,4 @@ RUN pacman -Syq --noconfirm couchpotato
 VOLUME "/config"
 
 EXPOSE 5050
-CMD /usr/bin/couchpotato --config_file "/config/config.ini" --datadir "/config" --console_log
+CMD /usr/bin/couchpotato --config_file "/config/config.ini" --data_dir "/config" --console_log
