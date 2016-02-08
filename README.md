@@ -8,5 +8,5 @@ A new release will be made shortly after each stable couchpotato release (a coup
 
 ##Usage##
 Couchpotato will run on port 5050 by default. (Use `-p 5050:5050`).
-Couchpotato configuration will be read from /config. Bind this directory to your host to make configuration changes permanent.
+Couchpotato configuration will be read from /config. Bind this directory to your host or a docker volume to make configuration changes permanent.
 If you want couchpotato to rename your downloaded files, you will also need to bind mount both your downloads folder and destination movies folder; locations are then configured via the webui.

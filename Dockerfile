@@ -3,10 +3,10 @@ MAINTAINER justin@dray.be
 
 ENV version 3.0.1
 RUN echo $version > /version
-RUN apk add --update py-lxml py-cffi py-cryptography
-RUN pip install pyopenssl lxml
+RUN apk add --update py-lxml
 RUN wget -O couchpotato.tar.gz https://github.com/RuudBurger/CouchPotatoServer/archive/build/$version.tar.gz && \
     tar xzf couchpotato.tar.gz && \
+    rm couchpotato.tar.gz && \
     mv CouchPotatoServer-build-$version couchpotato
 
 VOLUME "/config"
