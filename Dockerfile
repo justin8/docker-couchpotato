@@ -1,9 +1,15 @@
-FROM justin8/archlinux
+FROM justin8/python
 MAINTAINER justin@dray.be
 
-RUN pacman -Syq --noconfirm couchpotato && rm -rf /var/cache/pacman/pkg/*
+ENV version 3.0.1
+RUN echo $version > /version
+RUN apk add --update py-lxml py-cffi py-cryptography
+RUN pip install pyopenssl lxml
+RUN wget -O couchpotato.tar.gz https://github.com/RuudBurger/CouchPotatoServer/archive/build/$version.tar.gz && \
+    tar xzf couchpotato.tar.gz && \
+    mv CouchPotatoServer-build-$version couchpotato
 
 VOLUME "/config"
 
 EXPOSE 5050
-CMD /usr/bin/couchpotato --config_file "/config/config.ini" --data_dir "/config" --console_log
+CMD /usr/bin/python /couchpotato/CouchPotato.py --config_file "/config/config.ini" --data_dir "/config" --console_log

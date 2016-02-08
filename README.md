@@ -1,7 +1,7 @@
 #Docker Couchpotato#
 [![Build Status](https://jenkins.dray.be/buildStatus/icon?job=docker_couchpotato)](https://jenkins.dray.be/job/docker_couchpotato)
 
-This is a docker image for Couchpotato stable running on an Arch linux container
+This is a docker image for Couchpotato stable running on an Alpine linux container
 
 ##Release schedule##
 A new release will be made shortly after each stable couchpotato release (a couple days at most).
