@@ -9,9 +9,7 @@ RUN wget -O couchpotato.tar.gz https://github.com/RuudBurger/CouchPotatoServer/a
     rm couchpotato.tar.gz && \
     mv CouchPotatoServer-build-$version couchpotato
 
-ADD entrypoint.sh /entrypoint.sh
-
 VOLUME "/config"
 
 EXPOSE 5050
-CMD /entrypoint.sh /usr/bin/python /couchpotato/CouchPotato.py --config_file "/config/config.ini" --data_dir "/config" --console_log
+CMD /usr/bin/python /couchpotato/CouchPotato.py --config_file "/config/config.ini" --data_dir "/config" --console_log
