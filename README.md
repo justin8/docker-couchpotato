@@ -1,5 +1,5 @@
 #Docker Couchpotato#
-[![Build Status](https://jenkins.dray.be/buildStatus/icon?job=docker_couchpotato)](https://jenkins.dray.be/job/docker_couchpotato)
+[![Run Status](https://api.shippable.com/projects/57cfd380f3558a0e00d57d28/badge?branch=master)](https://app.shippable.com/projects/57cfd380f3558a0e00d57d28)
 
 This is a docker image for Couchpotato stable running on an Alpine linux container
 
